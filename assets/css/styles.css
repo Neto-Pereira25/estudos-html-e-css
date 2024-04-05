@@ -24,7 +24,9 @@
 .top3-content {
     max-width: 64rem;
     display: flex;
-    flex-flow: column nowrap;
+    /* flex-flow: column nowrap; */
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     min-height: 100vh;
     text-align: center;
@@ -78,4 +80,25 @@ usando um contador em css */
     left: -2rem;
     /* rotacinado o elemento */
     transform: rotate(5deg);
+}
+
+
+/* ajustando a imagem na seção */
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+/* colocando o efeito na imagem */
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    /* O translate dá o efeito de movimento da imagem */
+    /* O scale dá o efeito de aumento ou diminuição da imagem */
+    /* O rotate dá o efeito de rotação da imagem */
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
